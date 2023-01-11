@@ -1,0 +1,284 @@
+
+
+
+@font-face {
+	font-family: 'Gilroy';
+	src:
+		url(‘/font/Sul-Dupla.ttf’) format(‘ttf’),
+    url(‘/fonts/Gilroy-Regular.otf’) format(‘otf’),
+    url(‘/fonts/Gilroy-Medium.otf’) format(‘otf’),
+    url(‘/fonts/Gilroy-Semibold.otf’) format(‘otf’),
+    url(‘/fonts/Gilroy-Bold.otf’) format(‘otf’),
+    url(‘/fonts/Gilroy-Extrabold.otf’) format(‘otf’),
+
+}
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  margin: 0; 
+  height: 100%; 
+  font-family: 'Gilroy', sans-serif;
+}
+
+header{
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+  background: url(img/headerblog.jpg) no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 span:before {
+  color: #173931;
+  content: 'LIRE';
+  animation: animate infinite 6s;
+}
+
+@keyframes animate {
+  0%{
+    content: 'LIRE';
+  }
+  25%{
+    content: 'VOIR';
+  }
+  50%{
+    content: 'PARTAGER';
+  }
+  75%{
+    content: 'VIVRE';
+  }
+  100%{
+    content: 'LIRE';
+  }
+}
+
+nav{
+  top: 0;
+  left: 0;
+  z-index: 10;
+  position: fixed;
+  border-bottom: solid white 1px;
+  width: 90%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.405) ;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+}
+
+nav h1{
+
+  position: fixed;
+  left: 25%;
+  right: 25%;
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+}
+
+
+h1{
+  color: white;
+  font-size: 4em;
+  line-height: 0.8em;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+h2{
+  padding: 0;
+  font-size: 2em;
+  font-weight: 400;
+  line-height: 1.1em;
+  margin-bottom: 1.5em;
+}
+
+p{
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.4em;
+}
+
+.greenQuote{
+  margin-top: 100vh;
+  border-radius: 20px 20px 0 0;
+  background-color: #173931;
+  padding: 20% 10%;
+}
+
+.greenQuote :first-child{
+  color: white;
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.1em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid white;
+}
+
+.greenQuote :last-child::first-line{
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.greenQuote :last-child{
+  padding-top: 1em;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+.blog{
+  padding: 5% 5%;
+  background-color: white;
+}
+
+.borderTop{
+  border-top: solid black 1px;
+  margin-bottom: 3%;
+}
+
+.tab{
+  margin-bottom: 20px;
+}
+
+.blog article:first-child{
+  margin-bottom: 3%;
+}
+
+.blog article:nth-of-type(2){
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 20px;
+  row-gap: 40px;
+  margin-top: 5%;
+  margin-bottom: 40px;
+
+}
+
+.blog article:nth-of-type(2) .imgContainer{
+  width: 100%;
+  overflow: hidden;
+}
+
+.blog article:nth-of-type(2) .imgContainer  img{
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.blog article:nth-of-type(2) p{
+  margin-top: 10px;
+  font-size: 1.1em;
+  font-weight: 400;
+  line-height: 1em;
+}
+
+.titleArticle div{
+  display: flex;
+  flex-direction: row;
+}
+
+.tags a{
+  margin-right: 10px;
+  font-size: 1em;
+  color: black;
+  padding: 3px 10px; 
+  text-decoration: none;
+  border: solid black 1px;
+  border-radius: 100px;
+}
+
+.auteur{
+  font-size: 0.8em;
+
+}
+
+
+/* -------------------- RESPONSIVE -------------------- */
+
+@media (min-width:750px) {
+
+
+  h1{
+    color: white;
+    font-size: 7em;
+  }
+
+  h2{
+    font-size: 3em;
+  }
+
+  p{
+    font-size: 1.2em;
+  }
+
+  .greenQuote{
+    padding: 10% 20%;
+  }
+
+  
+
+  
+
+  .blog article{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .tab{
+    position: absolute;
+  }
+
+  .titleArticle{
+    margin-left: 33%;
+    margin-right: 15%;
+  }
+
+  .blogQuote{
+    margin: 5% 15% 0 33%;
+  }
+
+  .blog article:nth-of-type(2) p{
+    font-size: 1.3em;
+    line-height: 1.1em;
+  }
+
+}
+
+/* ---------------RESPONSIVE GRID PHOTO TEAM--------------- */
+
+
+@media (min-width:750px) and (max-width:1200px) {
+
+  .blog article:nth-of-type(2){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (min-width:1200px) {
+
+  .blog article:nth-of-type(2){
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

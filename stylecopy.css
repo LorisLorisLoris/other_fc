@@ -1,0 +1,483 @@
+@font-face {
+  font-family: "Sul";
+  src: url("fonts/Sul-StencilLight.ttf");
+}
+
+
+
+@font-face {
+	font-family: 'Gilroy';
+	src:
+		url(‘../fonts/Gilroy-Light.otf’) format(‘otf’),
+    url(‘../fonts/Gilroy-Regular.otf’) format(‘otf’),
+    url(‘../fonts/Gilroy-Medium.otf’) format(‘otf’),
+    url(‘../fonts/Gilroy-Semibold.otf’) format(‘otf’),
+    url(‘../fonts/Gilroy-Bold.otf’) format(‘otf’),
+    url(‘../fonts/Gilroy-Extrabold.otf’) format(‘otf’),
+}
+
+
+
+/* ---------------VARIABLES--------------- */
+
+:root {
+  --bg-kaki: #534D40;
+  --bg-lightkaki: #959185;
+  --bg-beige: #F5F4F4;
+  --txt-beige: #F5F4F4;
+  --bg-pink: #EE97B5;
+  --txt-pink:#EE97B5;
+  --bg-dark:#191D1C;
+  --txt-dark:#191D1C;
+  --bg-lime:#DBFD05;
+  --txt-lime:#DBFD05;
+}
+
+
+
+
+/* ---------------NAV--------------- */
+
+
+*{
+  font-family: 'Sul', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  margin: 0; 
+  height: 100%; 
+}
+
+h1{
+  color: white;
+  font-size: 4em;
+  line-height: 0.8em;
+  font-family: "Sul", sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+h2{
+  padding: 0;
+  font-size: 2em;
+  font-weight: 400;
+  line-height: 1.1em;
+  margin-bottom: 1.5em;
+}
+
+p{
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.4em;
+}
+
+/* ---------------NAV--------------- */
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  position: fixed;
+  border-bottom: solid white 1px;
+  width: 90%;
+  height: 55px;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.405) ;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+}
+
+nav h1{
+
+  position: fixed;
+  left: 25%;
+  right: 25%;
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* ---------------HEADER--------------- */
+
+header{
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+  background: url(img/image-header.png) no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 span:before {
+  color: #b68fec;
+  content: 'ENSEIGNER';
+  animation: animate infinite 6s;
+  transition:  2s ease-in;
+}
+header h1 span:after {
+  transition:  2s ease-in;
+}
+
+@keyframes animate {
+  0%{
+    content: 'ENSEIGNER';
+  }
+  25%{
+    content: 'APPRENDRE';
+  }
+  50%{
+    content: 'PARTAGER';
+  }
+  75%{
+    content: 'VIVRE';
+  }
+  100%{
+    content: 'ENSEIGNER';
+  }
+}
+
+/* ---------------PRESENTATION--------------- */
+
+.presentation{
+  background-color: white;
+  margin-top: 100vh;
+  border-radius: 20px 20px 0 0;
+  z-index: 5;
+}
+
+.presentationHead{
+  padding: 3%;
+  background-color: white;
+  margin-top: 100vh;
+  border-radius: 20px 20px 0 0;
+  z-index: 5;
+
+}
+
+.presentationVid video{
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+.presentationStadium{
+  width: 100%;
+  height: 50vh;
+  background: linear-gradient(0deg, rgba(23,57,49,1) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%), url(img/stadium.png) no-repeat center center/cover;
+}
+
+/* ---------------CITATION VERTE--------------- */
+
+.greenQuote{
+  background-color: var(--bg-kaki);
+  color: white;
+  padding: 20% 10%;
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.1em;
+}
+
+.greenQuote :first-child{
+  padding-bottom: 2em;
+  border-bottom: 1px solid white;
+}
+.greenQuote :last-child::first-line{
+  font-size: 1.2em;
+  font-weight: 400;
+}
+.greenQuote :last-child{
+  padding-top: 1em;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+.gradient{
+background: linear-gradient(180deg, rgba(245,225,218,1) 0%, #D1E5F6 100%);
+}
+
+/* ---------------EQUIPE--------------- */
+
+.team, .program{
+  padding: 10% 5%;
+}
+
+.borderTop{
+  border-top: solid black 1px;
+  margin-bottom: 3%;
+}
+
+.tab{
+  margin-bottom: 20px;
+}
+
+.team article:first-child{
+  margin-bottom: 3%;
+}
+
+.team article:nth-of-type(2){
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 40px;
+  margin-top: 5%;
+}
+
+.team article:nth-of-type(2) .imgContainer{
+  border-radius: 1em;
+  width: 100%;
+  overflow: hidden;
+}
+
+.team article:nth-of-type(2) .imgContainer  img{
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.team article:nth-of-type(2) p::first-line{
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.team article:nth-of-type(2) p{
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.teamQuote{
+  font-size: 1.2em;
+  font-weight: 400;
+  border-top: solid black 1px;
+  padding-top: 2%;
+  margin: 10% 10% 0 10%;
+}
+
+/* ---------------PROGRAMMES--------------- */
+
+.borderPink{
+  border-top: solid  #EE97B5 1px;
+  margin-bottom: 3%;
+}
+
+.programArticle .tab{
+  font-weight: bolder;
+  color:  #EE97B5 ;
+}
+
+.programArticle{
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+.subs{
+  font-size: 0.8em;
+  line-height: 2em;
+  margin-bottom: 5%;
+}
+
+.programArticle button{
+  padding-top: 3px;
+  margin-top: 2%;
+  width: 60px;
+  height: 20px;
+  border-radius: 2em;
+  border: none;
+  background-color: #EE97B5 ;
+  color: white;
+  cursor: pointer;
+}
+
+/* ---------------PUB--------------- */
+
+.pub{
+  margin-top: -3em;
+  padding: 5%;
+}
+
+.frame{
+  border-radius: 20px;
+  width: 100%;
+  background: url(img/image-contact.png) no-repeat center center/cover;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.frame button{
+  border-radius: 20px;
+  border: none;
+  padding: 4px 50px 2px 50px;
+  margin-bottom: 5%;
+  cursor: pointer;
+}
+
+.frame p{
+  text-align: center;
+  line-height: 1em;
+  color: white;
+  font-weight: 400;
+  font-size: 2.5em;
+  margin-bottom: 3%;
+}
+
+/* ---------------ANIMATION TXT--------------- */
+
+.ball{
+
+  width: 100%;
+  background: url(img/rebond_ballon_vintage_foot_1950_1.png) no-repeat center center/contain;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.container1 {
+  overflow: hidden;
+  display: flex;
+  /* Fonctionne avec toutes les tailles */
+  width: 100%;
+  position: absolute;
+  /* pour rotate on enlève le translate et on rajoute le rotate */
+  /* transform:  rotate(90deg); */
+}
+.container2 {
+  overflow: hidden;
+  display: flex;
+  /* Fonctionne avec toutes les tailles */
+  margin-top: 100px;
+  width: 100%;
+  position: absolute;
+  /* pour rotate on enlève le translate et on rajoute le rotate */
+  /* transform:  rotate(90deg); */
+}
+
+.txt {
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 3em;
+  animation: scrollTxt 40s linear infinite;
+}
+
+.container2 .txt {
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 3em;
+  animation: scrollTxtReverse 40s linear infinite;
+}
+
+.t1 {
+  /* color: red; */
+}
+.t2 {
+  /* color: blue; */
+}
+@keyframes scrollTxt {
+  0%{
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+@keyframes scrollTxtReverse {
+  0%{
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.logoAsso{
+  text-align: center;
+}  
+
+.logoAsso img{
+  width: 200px;
+}
+
+
+/* ---------------RESPONSIVE GRID PHOTO TEAM--------------- */
+
+@media (min-width:600px) and (max-width:750px) {
+
+  .team article:nth-of-type(2){
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+@media (min-width:750px) and (max-width:1000px) {
+
+  .team article:nth-of-type(2){
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}
+
+@media (min-width:1000px) and (max-width:1200px) {
+
+  .team article:nth-of-type(2){
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+}
+
+@media (min-width:1200px) {
+
+  .team article:nth-of-type(2){
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+
+
+
+
+.parent {
+  padding: 5%;
+  display: grid;
+  background-color: white;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  }
+  
+  .div1 { 
+    border-top: solid  #EE97B5 1px;
+    grid-area: 1 / 1 / 2 / 13;
+  }
+  .div2 { grid-area: 2 / 1 / 3 / 2; }
+  .div3 { grid-area: 2 / 5 / 4 / 11; }
